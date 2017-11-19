@@ -4,7 +4,7 @@
 window.onload = function(){
 //aca se llaman a las funciones para que se carguen en la pagina
 
-    //
+    //totalEstudiantes();
     //desercionEstudiantes();
     //
     //
@@ -19,7 +19,69 @@ window.onload = function(){
 // Puedes hacer uso de la base de datos a través de la variable `data`
 console.log(data);
 
+
 //1.-El total de estudiantes presentes por sede y generación.
+function totalEstudiantes(){
+var totalEstudiantes_AQP1 = 0;
+for(var i = 0; i < data.AQP['2016-2'].students.length; i++){
+totalEstudiantes_AQP1++;
+};
+console.log('total estudiantes: ' + totalEstudiantes_AQP1);
+
+var totalEstudiantes_AQP2 = 0;
+for(var i = 0; i < data.AQP['2017-1'].students.length; i++){
+totalEstudiantes_AQP2++;
+};
+console.log('total estudiantes: ' + totalEstudiantes_AQP2);
+
+var totalEstudiantes_CDMX1 = 0;
+for(var i = 0; i < data.CDMX['2017-1'].students.length; i++){
+totalEstudiantes_CDMX1++;
+};
+console.log('total estudiantes: ' + totalEstudiantes_CDMX1);
+
+var totalEstudiantes_CDMX2 = 0;
+for(var i = 0; i < data.CDMX['2017-2'].students.length; i++){
+totalEstudiantes_CDMX2++;
+};
+console.log('total estudiantes: ' + totalEstudiantes_CDMX2);
+
+var totalEstudiantes_LIM1 = 0;
+for(var i = 0; i < data.LIM['2016-2'].students.length; i++){
+totalEstudiantes_LIM1++;
+};
+console.log('total estudiantes: ' + totalEstudiantes_LIM1);
+
+var totalEstudiantes_LIM2 = 0;
+for(var i = 0; i < data.LIM['2017-1'].students.length; i++){
+totalEstudiantes_LIM2++;
+};
+console.log('total estudiantes: ' + totalEstudiantes_LIM2);
+
+var totalEstudiantes_LIM3 = 0;
+for(var i = 0; i < data.LIM['2017-2'].students.length; i++){
+totalEstudiantes_LIM3++;
+};
+console.log('total estudiantes: ' + totalEstudiantes_LIM3);
+
+var totalEstudiantes_SCL1 = 0;
+for(var i = 0; i < data.SCL['2016-2'].students.length; i++){
+totalEstudiantes_SCL1++;
+};
+console.log('total estudiantes: ' + totalEstudiantes_SCL1);
+
+var totalEstudiantes_SCL2 = 0;
+for(var i = 0; i < data.SCL['2017-1'].students.length; i++){
+totalEstudiantes_SCL2++;
+};
+console.log('total estudiantes: ' + totalEstudiantes_SCL2);
+
+var totalEstudiantes_SCL3 = 0;
+for(var i = 0; i < data.SCL['2017-2'].students.length; i++){
+totalEstudiantes_SCL3++;
+};
+console.log('total estudiantes: ' + totalEstudiantes_SCL3);
+}
 
 //2.-Funcion porcentaje de deserción de estudiantes.
 function desercionEstudiantes(){
