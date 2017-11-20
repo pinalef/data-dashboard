@@ -4,11 +4,11 @@
 window.onload = function(){
 //aca se llaman a las funciones para que se carguen en la pagina
 
-    //totalEstudiantes()
+    totalEstudiantes()
     //desercionEstudiantes();
-    //superanMeta();
-    //
-    //
+    superanMeta();
+    porcentajeEstudiantes();
+    //nps();
     //
     //
     //promedioProfesores();
@@ -81,6 +81,8 @@ for(var i = 0; i < data.SCL['2017-2'].students.length; i++){
 totalEstudiantes_SCL3++;
 };
 console.log('total estudiantes: ' + totalEstudiantes_SCL3);
+
+return totalEstudiantes_AQP1 + totalEstudiantes_AQP2 + totalEstudiantes_CDMX1 + totalEstudiantes_CDMX2 + totalEstudiantes_LIM1 + totalEstudiantes_LIM2 + totalEstudiantes_LIM2 + totalEstudiantes_LIM3 + totalEstudiantes_SCL1 + totalEstudiantes_SCL2 + totalEstudiantes_SCL3;
 }
 
 //2.-Funcion porcentaje de deserción de estudiantes.
@@ -425,13 +427,118 @@ function superanMeta(){
                    continue;
                }
             } 
-var estudiantesTotales = countAQP1 + countAQP2 + countCDMX1 + countCDMX2 + countLIM1 + countLIM2 + countLIM3 + countSCL1 + countSCL2 + countSCL3;
-console.log(estudiantesTotales +' estudiantes superan la meta de puntos en promedio de todos los sprints cursados');
+return countAQP1 + countAQP2 + countCDMX1 + countCDMX2 + countLIM1 + countLIM2 + countLIM3 + countSCL1 + countSCL2 + countSCL3;
 }
 
 //4.-El porcentaje que representa el dato anterior en relación al total de estudiantes
 
+function porcentajeEstudiantes(){
+return (superanMeta() * 100) / totalEstudiantes();
+}
+
+
 //5.-El Net Promoter Score (NPS) promedio de los sprints cursados
+function nps(){
+var promoters_AQP1 = 0;
+var detractors_AQP1 = 0;
+var nps_AQP1 = 0;
+for(var i = 0; i< data.AQP["2016-2"].ratings.length; i++){
+promoters_AQP1 += data.AQP["2016-2"].ratings[i].nps.promoters/data.AQP['2016-2'].students.length;
+detractors_AQP1 += data.AQP["2016-2"].ratings[i].nps.detractors/data.AQP['2016-2'].students.length;
+nps_AQP1 = promoters_AQP1 - detractors_AQP1;
+}
+console.log('nps_AQP1: ' + nps_AQP1);
+
+var promoters_AQP2 = 0;
+var detractors_AQP2 = 0;
+var nps_AQP2 = 0;
+for(var i = 0; i< data.AQP["2017-1"].ratings.length; i++){
+promoters_AQP2 += data.AQP["2017-1"].ratings[i].nps.promoters/data.AQP['2017-1'].students.length;
+detractors_AQP2 += data.AQP["2017-1"].ratings[i].nps.detractors/data.AQP['2017-1'].students.length;
+nps_AQP2 = promoters_AQP2 - detractors_AQP2;
+}
+console.log('nps_AQP2: ' + nps_AQP2);
+
+var promoters_CDMX1 = 0;
+var detractors_CDMX1 = 0;
+var nps_CDMX1 = 0;
+for(var i = 0; i< data.CDMX["2017-1"].ratings.length; i++){
+promoters_CDMX1 += data.CDMX["2017-1"].ratings[i].nps.promoters/data.CDMX['2017-1'].students.length;
+detractors_CDMX1 += data.CDMX["2017-1"].ratings[i].nps.detractors/data.CDMX['2017-1'].students.length;
+nps_CDMX1 = promoters_CDMX1 - detractors_CDMX1;
+}
+console.log('nps_CDMX1: ' + nps_CDMX1);
+
+var promoters_CDMX2 = 0;
+var detractors_CDMX2 = 0;
+var nps_CDMX2 = 0;
+for(var i = 0; i< data.CDMX["2017-2"].ratings.length; i++){
+promoters_CDMX2 += data.CDMX["2017-2"].ratings[i].nps.promoters/data.CDMX['2017-2'].students.length;
+detractors_CDMX2 += data.CDMX["2017-2"].ratings[i].nps.detractors/data.CDMX['2017-2'].students.length;
+nps_CDMX2 = promoters_CDMX2 - detractors_CDMX2;
+}
+console.log('nps_CDMX2: ' + nps_CDMX2);
+
+var promoters_LIM1 = 0;
+var detractors_LIM1 = 0;
+var nps_LIM1 = 0;
+for(var i = 0; i< data.LIM["2016-2"].ratings.length; i++){
+promoters_LIM1 += data.LIM["2016-2"].ratings[i].nps.promoters/data.LIM['2016-2'].students.length;
+detractors_LIM1 += data.LIM["2016-2"].ratings[i].nps.detractors/data.LIM['2016-2'].students.length;
+nps_LIM1 = promoters_LIM1 - detractors_LIM1;
+}
+console.log('nps_LIM1: ' + nps_LIM1);
+
+var promoters_LIM2 = 0;
+var detractors_LIM2 = 0;
+var nps_LIM2 = 0;
+for(var i = 0; i< data.LIM["2017-1"].ratings.length; i++){
+promoters_LIM2 += data.LIM["2017-1"].ratings[i].nps.promoters/data.LIM['2017-1'].students.length;
+detractors_LIM2 += data.LIM["2017-1"].ratings[i].nps.detractors/data.LIM['2017-1'].students.length;
+nps_LIM2 = promoters_LIM2 - detractors_LIM2;
+}
+console.log('nps_LIM2: ' + nps_LIM2);
+
+var promoters_LIM3 = 0;
+var detractors_LIM3 = 0;
+var nps_LIM3 = 0;
+for(var i = 0; i< data.LIM["2017-2"].ratings.length; i++){
+promoters_LIM3 += data.LIM["2017-2"].ratings[i].nps.promoters/data.LIM['2017-2'].students.length;
+detractors_LIM3 += data.LIM["2017-2"].ratings[i].nps.detractors/data.LIM['2017-2'].students.length;
+nps_LIM3 = promoters_LIM3 - detractors_LIM3;
+}
+console.log('nps_LIM3: ' + nps_LIM3);
+
+var promoters_SCL1 = 0;
+var detractors_SCL1 = 0;
+var nps_SCL1 = 0;
+for(var i = 0; i< data.SCL["2016-2"].ratings.length; i++){
+promoters_SCL1 += data.SCL["2016-2"].ratings[i].nps.promoters/data.SCL['2016-2'].students.length;
+detractors_SCL1 += data.SCL["2016-2"].ratings[i].nps.detractors/data.SCL['2016-2'].students.length;
+nps_SCL1 = promoters_SCL1 - detractors_SCL1;
+}
+console.log('nps_SCL1: ' + nps_SCL1);
+
+var promoters_SCL2 = 0;
+var detractors_SCL2 = 0;
+var nps_SCL2 = 0;
+for(var i = 0; i< data.SCL["2017-1"].ratings.length; i++){
+promoters_SCL2 += data.SCL["2017-1"].ratings[i].nps.promoters/data.SCL['2017-1'].students.length;
+detractors_SCL2 += data.SCL["2017-1"].ratings[i].nps.detractors/data.SCL['2017-1'].students.length;
+nps_SCL2 = promoters_SCL2 - detractors_SCL2;
+}
+console.log('nps_SCL2: ' + nps_SCL2);
+
+var promoters_SCL3 = 0;
+var detractors_SCL3 = 0;
+var nps_SCL3 = 0;
+for(var i = 0; i< data.SCL["2017-2"].ratings.length; i++){
+promoters_SCL3 += data.SCL["2017-2"].ratings[i].nps.promoters/data.SCL['2017-2'].students.length;
+detractors_SCL3 += data.SCL["2017-2"].ratings[i].nps.detractors/data.SCL['2017-2'].students.length;
+nps_SCL3 = promoters_SCL3 - detractors_SCL3;
+}
+console.log('nps_SCL3: ' + nps_SCL3);
+}
 
 //6.-La cantidad y el porcentaje que representa el total de estudiantes que superan la meta de puntos técnicos en promedio y por sprint.
 
