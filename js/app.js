@@ -82,8 +82,18 @@ totalEstudiantes_SCL3++;
 };
 console.log('total estudiantes: ' + totalEstudiantes_SCL3);
 
+var resultadoEstudiantes = totalEstudiantes_AQP1 + totalEstudiantes_AQP2 + totalEstudiantes_CDMX1 + totalEstudiantes_CDMX2 + totalEstudiantes_LIM1 + totalEstudiantes_LIM2 + totalEstudiantes_LIM2 + totalEstudiantes_LIM3 + totalEstudiantes_SCL1 + totalEstudiantes_SCL2 + totalEstudiantes_SCL3;
+
+//agregar promedios al html
+var estudiantesDiv = document.getElementById('totalEstudiantes');
+var  nodoElemento = document.createElement('h2');
+var nodoTexto = document.createTextNode(resultadoEstudiantes);
+nodoElemento.appendChild(nodoTexto);
+estudiantesDiv.appendChild(nodoElemento);
+ 
 return totalEstudiantes_AQP1 + totalEstudiantes_AQP2 + totalEstudiantes_CDMX1 + totalEstudiantes_CDMX2 + totalEstudiantes_LIM1 + totalEstudiantes_LIM2 + totalEstudiantes_LIM2 + totalEstudiantes_LIM3 + totalEstudiantes_SCL1 + totalEstudiantes_SCL2 + totalEstudiantes_SCL3;
 }
+
 
 //2.-Funcion porcentaje de deserción de estudiantes.
 function desercionEstudiantes(){
@@ -189,6 +199,14 @@ console.log(desercionLIM3_percent + " %LIM3");
 console.log(desercionSCL1_percent + " %SCL1");
 console.log(desercionSCL2_percent + " %SCL2");
 console.log(desercionSCL3_percent + " %SCL3");
+
+var totalDesercion = (desercionAQP1_percent + desercionAQP2_percent + desercionCDMX1_percent + desercionCDMX2_percent + desercionLIM1_percent + desercionLIM2_percent + desercionLIM3_percent + desercionSCL1_percent + desercionSCL2_percent + desercionSCL3_percent)/10;
+//agregar promedios al html
+var estudiantesPorcenDiv = document.getElementById('porcentajeDesercion');
+var  nodoElemento = document.createElement('h2');
+var nodoTexto = document.createTextNode(Math.round(totalDesercion) + '%');
+nodoElemento.appendChild(nodoTexto);
+estudiantesPorcenDiv.appendChild(nodoElemento);
 }
 
 //3.-La cantidad de estudiantes que superan la meta de puntos en promedio de todos los sprints cursados. La meta de puntos es 70% del total de puntos.
@@ -428,13 +446,31 @@ function superanMeta(){
                  }
               } 
   
+var totalCount = countAQP1 + countAQP2 + countCDMX1 + countCDMX2 + countLIM1 + countLIM2 + countLIM3 + countSCL1 + countSCL2 + countSCL3;
+
+//agregar promedios al html
+var superanMetaDiv = document.getElementById('estudiantesMeta');
+var nodoElemento = document.createElement('h2');
+var nodoTexto = document.createTextNode(totalCount);
+nodoElemento.appendChild(nodoTexto);
+superanMetaDiv.appendChild(nodoElemento);
 return countAQP1 + countAQP2 + countCDMX1 + countCDMX2 + countLIM1 + countLIM2 + countLIM3 + countSCL1 + countSCL2 + countSCL3;
 }
+
+
 
 //4.-El porcentaje que representa el dato anterior en relación al total de estudiantes
 
 function porcentajeEstudiantes(){
-return (superanMeta() * 100) / totalEstudiantes();
+
+var total = ((superanMeta() * 100) / totalEstudiantes());
+//agregar promedios al html
+var porcentajEstudiantesDiv = document.getElementById('porcentajeMeta');
+var nodoElemento = document.createElement('h2');
+var nodoTexto = document.createTextNode(Math.round(total));
+nodoElemento.appendChild(nodoTexto);
+porcentajEstudiantesDiv.appendChild(nodoElemento);
+return ((superanMeta() * 100) / totalEstudiantes());
 }
 
 
@@ -1025,6 +1061,12 @@ var sumaTotal = promAQP1 + promAQP2 + promCDMX1 + promCDMX2 + promLIM1 + promLIM
 var promedioAlumnas = sumaTotal/10;
 console.log('promedio de Alumnas: '+promedioAlumnas);
 
+//agregar promedios al html
+var expectativasDiv = document.getElementById('expectativasEstudiantes');
+var  nodoElemento = document.createElement('h2');
+var nodoTexto = document.createTextNode(Math.round(promedioAlumnas));
+nodoElemento.appendChild(nodoTexto);
+expectativasDiv.appendChild(nodoElemento);
 }
 
 //9.-Funcion  puntuación promedio de l@s profesores.
@@ -1114,6 +1156,13 @@ console.log(sumaSCL3_prof+' suma y promedio P:'+promSCL3_prof);
 var sumaTotal = promAQP1_prof + promAQP2_prof + promCDMX1_prof + promCDMX2_prof + promLIM1_prof + promLIM2_prof + promLIM3_prof + promSCL1_prof + promSCL2_prof + promSCL3_prof;
 var promedioProfesores = sumaTotal/10;
 console.log('promedio de profesores '+ promedioProfesores);
+
+//agregar promedios al html
+var profesDiv = document.getElementById('promedioProfesor');
+var  nodoElemento = document.createElement('h2');
+var nodoTexto = document.createTextNode(Math.round(promedioProfesores));
+nodoElemento.appendChild(nodoTexto);
+profesDiv.appendChild(nodoElemento);
 }
 
 
@@ -1204,5 +1253,12 @@ console.log(sumaSCL3+' suma y promedio :'+promSCL3);
 var sumaTotal = promAQP1 + promAQP2 + promCDMX1 + promCDMX2 + promLIM1 + promLIM2 + promLIM3 + promSCL1 + promSCL2 + promSCL3;
 var promedioJedis = sumaTotal/10;
 console.log('promedio de jedis '+promedioJedis);
+
+//agregar promedios al html
+var jedisDiv = document.getElementById('promedioJedi');
+var  nodoElemento = document.createElement('h2');
+var nodoTexto = document.createTextNode(Math.round(promedioJedis));
+nodoElemento.appendChild(nodoTexto);
+jedisDiv.appendChild(nodoElemento);
 
 }

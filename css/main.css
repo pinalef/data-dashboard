@@ -96,7 +96,7 @@
  
  
  /*Div vacios para DOM*/
- .totalEstudiantes, .porcentajeDesercion, .estudiantesMeta, .porcentajeMeta, .nps, .npsDetallePuntajes,  .expectativasEstudiantes, .promedioProfesor, .promedioJedi, .estudiantesTech, .porcentajeTech, .estudiantesLifeSkills,.porcentajeLifeSkills{
+ #totalEstudiantes, #porcentajeDesercion, #estudiantesMeta, #porcentajeMeta, .nps, .npsDetallePuntajes,  #expectativasEstudiantes, #promedioProfesor, #promedioJedi, .estudiantesTech, .porcentajeTech, .estudiantesLifeSkills,.porcentajeLifeSkills{
   /*outline: 1px solid orange;*/
   width: 9em;
   height: 6em;
