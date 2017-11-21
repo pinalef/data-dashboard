@@ -3,12 +3,92 @@
   <head>
     <meta charset="utf-8">
     <title>Data Dashboard</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
   </head>
   <body>
-
-		<!-- Base de datos -->
-		<script src="./js/data.js"></script>
-		<!-- Aquí va tus archivos JS -->
+    <!--Logo-->
+    <header>
+      <div class="contHeader">
+        <img class="logo" src="assets/images/logo-laboratoria.svg" alt="">
+      </div>
+    </header>
+  <!--Menu-->
+    <section class="menu">
+      <nav>
+        <ul>
+          <li><a href="#">Overview</a></li>
+          <li><a href="#">Arequipa</a></li>
+          <li><a href="#">México DF</a></li>
+          <li><a href="#">Lima</a></li>
+          <li><a href="#">Santiago de Chile</a></li>
+        </ul>
+      </nav>
+    </section>
+    <!--Seccion Datos y graficos-->
+    <section>
+      <h1>SCL 2017-II</h1>
+      <div class="container_fila1">
+        <div class="container_1">
+          <h3 class="title_1">Enrollment</h3>
+          <div class="totalEstudiantes"></div>
+          <div class="porcentajeDesercion"></div>
+          <img src="assets/images/bar-graph.png" alt="">
+        </div>
+        <div class="container_2">
+          <h3 class="title_2">Achievement</h3>
+          <div class="estudiantesMeta"></div>
+          <div class="porcentajeMeta"></div>
+          <img src="assets/images/graph.png" alt="">
+        </div>
+        <div class="container_3">
+          <h3 class="title_3">Net Promoter Score</h3>
+          <div class="nps"></div>
+          <div class="npsDetallePuntajes"></div>
+          <img src="assets/images/graph.png" alt="">
+        </div>
+      </div>
+      <div class="container_fila2">
+        <div class="container_4">
+          <h3 class="title_4">Tech Skills</h3>
+          <div class="estudiantesTech"></div>
+          <div class="porcentajeTech"></div>
+          <br>
+          <img class="rectangular" src="assets/images/rectangular-graphic.png" alt="">
+          <img class="circle" src="assets/images/circle-graphic.png" alt="">
+        </div>
+      </div>
+      <div class="container_fila3">
+        <div class="container_5">
+          <h3 class="title_5">Life Skills</h3>
+          <div class="estudiantesLifeSkills"></div>
+          <div class="porcentajeLifeSkills"></div>
+          <br>
+          <img class="rectangular" src="assets/images/rectangular-graphic.png" alt="">
+          <img class="circle" src="assets/images/circle-graphic.png" alt="">
+        </div>
+      </div>
+      <div class="container_fila4">
+        <div class="container_1">
+          <h3 class="title_1">Student Satisfaction</h3>
+          <div class="expectativasEstudiantes"></div>
+          <img src="assets/images/graph.png" alt="">
+        </div>
+        <div class="container_2">
+          <h3 class="title_2">Teacher Rating</h3>
+          <div class="promedioProfesor"></div>
+          <img src="assets/images/graph.png" alt="">
+        </div>
+        <div class="container_3">
+          <h3 class="title_3">Jedi Master Rating</h3>
+          <div class="promedioJedi"></div>
+          <img src="assets/images/graph.png" alt="">
+        </div>
+      </div>
+    </section>
+        <!-- Base de datos -->
+        <script src="./js/data.js"></script>
+        <!-- Aquí va tus archivos JS -->
     <script src="./js/app.js"></script>
   </body>
 </html>

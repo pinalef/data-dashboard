@@ -199,17 +199,12 @@ function superanMeta(){
     var countAQP1= 0;
     for(var i = 0; i < studentsAQP1.length; i++){
         var sprints = data.AQP["2016-2"].students[i].sprints;
-        var s1H= data.AQP["2016-2"].students[i].sprints[0].score.hse;
         var s1T= data.AQP["2016-2"].students[i].sprints[0].score.tech;
-        var s2H= data.AQP["2016-2"].students[i].sprints[1].score.hse;
         var s2T= data.AQP["2016-2"].students[i].sprints[1].score.tech;
-        var s3H= data.AQP["2016-2"].students[i].sprints[2].score.hse;
         var s3T= data.AQP["2016-2"].students[i].sprints[2].score.tech;
-        var s4H= data.AQP["2016-2"].students[i].sprints[3].score.hse;
         var s4T= data.AQP["2016-2"].students[i].sprints[3].score.tech;
 
-            if ((s1H + s2H + s3H  + s4H)/sprints.length > 840 && (s1T + s2T + s3T + s4T)/sprints.length > 1260){
-            console.log('nombre estudiante: '+data.AQP["2016-2"].students[i].name+' puntaje hse: '+((s1H + s2H + s3H  + s4H)/sprints.length));
+            if ((s1T + s2T + s3T + s4T)/sprints.length > 1260){
             console.log('nombre estudiante: '+data.AQP["2016-2"].students[i].name+' puntaje tech: '+((s1T + s2T + s3T  + s4T)/sprints.length));
             countAQP1++;
             console.log(countAQP1);
@@ -221,15 +216,11 @@ function superanMeta(){
     var countAQP2= 0;
     for(var i = 0; i < studentsAQP2.length; i++){
         var sprints = data.AQP["2017-1"].students[i].sprints;
-        var s1H= data.AQP["2017-1"].students[i].sprints[0].score.hse;
         var s1T= data.AQP["2017-1"].students[i].sprints[0].score.tech;
-        var s2H= data.AQP["2017-1"].students[i].sprints[1].score.hse;
         var s2T= data.AQP["2017-1"].students[i].sprints[1].score.tech;
-        var s3H= data.AQP["2017-1"].students[i].sprints[2].score.hse;
         var s3T= data.AQP["2017-1"].students[i].sprints[2].score.tech;
 
-            if ((s1H + s2H + s3H)/sprints.length > 840 && (s1T + s2T + s3T)/sprints.length > 1260){
-            console.log('nombre estudiante: '+data.AQP["2017-1"].students[i].name+' puntaje hse: '+((s1H + s2H + s3H)/sprints.length));
+            if ((s1T + s2T + s3T)/sprints.length > 1260){
             console.log('nombre estudiante: '+data.AQP["2017-1"].students[i].name+' puntaje tech: '+((s1T + s2T + s3T)/sprints.length));
             countAQP2++;
             console.log(countAQP2);
@@ -241,15 +232,11 @@ function superanMeta(){
       var countCDMX1= 0;
       for(var i = 0; i < studentsCDMX1.length; i++){
           var sprints = data.CDMX["2017-1"].students[i].sprints;
-          var s1H= data.CDMX["2017-1"].students[i].sprints[0].score.hse;
           var s1T= data.CDMX["2017-1"].students[i].sprints[0].score.tech;
-          var s2H= data.CDMX["2017-1"].students[i].sprints[1].score.hse;
           var s2T= data.CDMX["2017-1"].students[i].sprints[1].score.tech;
-          var s3H= data.CDMX["2017-1"].students[i].sprints[2].score.hse;
           var s3T= data.CDMX["2017-1"].students[i].sprints[2].score.tech;
   
-              if ((s1H + s2H + s3H)/sprints.length > 840 && (s1T + s2T + s3T)/sprints.length > 1260){
-              console.log('nombre estudiante: '+data.CDMX["2017-1"].students[i].name+' puntaje hse: '+((s1H + s2H + s3H)/sprints.length));
+              if ((s1T + s2T + s3T)/sprints.length > 1260){
               console.log('nombre estudiante: '+data.CDMX["2017-1"].students[i].name+' puntaje tech: '+((s1T + s2T + s3T)/sprints.length));
               countCDMX1++;
               console.log(countCDMX1);
@@ -263,13 +250,10 @@ function superanMeta(){
              //verifica si esta activa la estudiante
              if(data.CDMX['2017-2'].students[i].active){
              var sprints = data.CDMX['2017-2'].students[i].sprints;
-             var s1H= data.CDMX['2017-2'].students[i].sprints[0].score.hse;
              var s1T= data.CDMX['2017-2'].students[i].sprints[0].score.tech;
-             var s2H= data.CDMX['2017-2'].students[i].sprints[1].score.hse;
              var s2T= data.CDMX['2017-2'].students[i].sprints[1].score.tech;
      
-                 if ((s1H + s2H)/sprints.length > 840 && (s1T + s2T)/sprints.length > 1260){
-                 console.log('nombre estudiante: '+data.CDMX['2017-2'].students[i].name+' puntaje hse: '+((s1H + s2H)/sprints.length));
+                 if ((s1T + s2T)/sprints.length > 1260){
                  console.log('nombre estudiante: '+data.CDMX['2017-2'].students[i].name+' puntaje tech: '+((s1T + s2T)/sprints.length));
                  countCDMX2++;
                  console.log(countCDMX2);
@@ -286,13 +270,10 @@ function superanMeta(){
                //verifica si esta activa la estudiante
                if(data.LIM['2016-2'].students[i].active){
                var sprints = data.LIM['2016-2'].students[i].sprints;
-               var s1H= data.LIM['2016-2'].students[i].sprints[0].score.hse;
                var s1T= data.LIM['2016-2'].students[i].sprints[0].score.tech;
-               var s2H= data.LIM['2016-2'].students[i].sprints[1].score.hse;
                var s2T= data.LIM['2016-2'].students[i].sprints[1].score.tech;
        
-                   if ((s1H + s2H)/sprints.length > 840 && (s1T + s2T)/sprints.length > 1260){
-                   console.log('nombre estudiante: '+data.LIM['2016-2'].students[i].name+' puntaje hse: '+((s1H + s2H)/sprints.length));
+                   if ((s1T + s2T)/sprints.length > 1260){
                    console.log('nombre estudiante: '+data.LIM['2016-2'].students[i].name+' puntaje tech: '+((s1T + s2T)/sprints.length));
                    countLIM1++;
                    console.log(countLIM1);
@@ -541,8 +522,407 @@ console.log('nps_SCL3: ' + nps_SCL3);
 }
 
 //6.-La cantidad y el porcentaje que representa el total de estudiantes que superan la meta de puntos técnicos en promedio y por sprint.
+function superanTech(){
+
+    //alumnas de AQP 2016-2
+    var studentsAQP1 = data.AQP["2016-2"].students;
+    var countAQP1= 0;
+    for(var i = 0; i < studentsAQP1.length; i++){
+        var sprints = data.AQP["2016-2"].students[i].sprints;
+        var s1T= data.AQP["2016-2"].students[i].sprints[0].score.tech;
+        var s2T= data.AQP["2016-2"].students[i].sprints[1].score.tech;
+        var s3T= data.AQP["2016-2"].students[i].sprints[2].score.tech;
+        var s4T= data.AQP["2016-2"].students[i].sprints[3].score.tech;
+
+            if ((s1T + s2T + s3T + s4T)/sprints.length > 1260){
+            console.log('nombre estudiante: '+data.AQP["2016-2"].students[i].name+' puntaje tech: '+((s1T + s2T + s3T  + s4T)/sprints.length));
+            countAQP1++;
+            console.log(countAQP1);
+              }
+    }
+
+    //alumnas de AQP 2017-1
+    var studentsAQP2 = data.AQP["2017-1"].students;
+    var countAQP2= 0;
+    for(var i = 0; i < studentsAQP2.length; i++){
+        var sprints = data.AQP["2017-1"].students[i].sprints;
+        var s1T= data.AQP["2017-1"].students[i].sprints[0].score.tech;
+        var s2T= data.AQP["2017-1"].students[i].sprints[1].score.tech;
+        var s3T= data.AQP["2017-1"].students[i].sprints[2].score.tech;
+
+            if ((s1T + s2T + s3T)/sprints.length > 1260){
+            console.log('nombre estudiante: '+data.AQP["2017-1"].students[i].name+' puntaje tech: '+((s1T + s2T + s3T)/sprints.length));
+            countAQP2++;
+            console.log(countAQP2);
+              }
+    }
+
+      //alumnas de CDMX 2017-1
+      var studentsCDMX1 = data.CDMX["2017-1"].students;
+      var countCDMX1= 0;
+      for(var i = 0; i < studentsCDMX1.length; i++){
+          var sprints = data.CDMX["2017-1"].students[i].sprints;
+          var s1T= data.CDMX["2017-1"].students[i].sprints[0].score.tech;
+          var s2T= data.CDMX["2017-1"].students[i].sprints[1].score.tech;
+          var s3T= data.CDMX["2017-1"].students[i].sprints[2].score.tech;
+  
+              if ((s1T + s2T + s3T)/sprints.length > 1260){
+              console.log('nombre estudiante: '+data.CDMX["2017-1"].students[i].name+' puntaje tech: '+((s1T + s2T + s3T)/sprints.length));
+              countCDMX1++;
+              console.log(countCDMX1);
+                }
+      }
+
+         //alumnas de CDMX 2017-2
+         var studentsCDMX2 = data.CDMX['2017-2'].students;
+         var countCDMX2= 0;
+         for(var i = 0; i < studentsCDMX2.length; i++){
+             //verifica si esta activa la estudiante
+             if(data.CDMX['2017-2'].students[i].active){
+             var sprints = data.CDMX['2017-2'].students[i].sprints;
+             var s1T= data.CDMX['2017-2'].students[i].sprints[0].score.tech;
+             var s2T= data.CDMX['2017-2'].students[i].sprints[1].score.tech;
+     
+                 if ((s1T + s2T)/sprints.length > 1260){
+                 console.log('nombre estudiante: '+data.CDMX['2017-2'].students[i].name+' puntaje tech: '+((s1T + s2T)/sprints.length));
+                 countCDMX2++;
+                 console.log(countCDMX2);
+                   }
+                }else{
+                continue;
+            }
+         }
+
+           //alumnas de LIM 2016-2
+           var studentsLIM1 = data.LIM['2016-2'].students;
+           var countLIM1= 0;
+           for(var i = 0; i < studentsLIM1.length; i++){
+               //verifica si esta activa la estudiante
+               if(data.LIM['2016-2'].students[i].active){
+               var sprints = data.LIM['2016-2'].students[i].sprints;
+               var s1T= data.LIM['2016-2'].students[i].sprints[0].score.tech;
+               var s2T= data.LIM['2016-2'].students[i].sprints[1].score.tech;
+       
+                   if ((s1T + s2T)/sprints.length > 1260){
+                   console.log('nombre estudiante: '+data.LIM['2016-2'].students[i].name+' puntaje tech: '+((s1T + s2T)/sprints.length));
+                   countLIM1++;
+                   console.log(countLIM1);
+                     }
+                  }else{
+                  continue;
+              }
+           }
+
+             //alumnas de LIM 2017-1
+             var studentsLIM2 = data.LIM['2017-1'].students;
+             var countLIM2= 0;
+             for(var i = 0; i < studentsLIM2.length; i++){
+                 //verifica si esta activa la estudiante
+                 if(data.LIM['2017-1'].students[i].active){
+                 var sprints = data.LIM['2017-1'].students[i].sprints;
+                 var s1T= data.LIM['2017-1'].students[i].sprints[0].score.tech;
+                 var s2T= data.LIM['2017-1'].students[i].sprints[1].score.tech;
+                 var s3T= data.LIM['2017-1'].students[i].sprints[2].score.tech;
+                 var s4T= data.LIM['2017-1'].students[i].sprints[3].score.tech;
+         
+                     if ((s1T + s2T + s3T + s4T)/sprints.length > 1260){
+                     console.log('nombre estudiante: '+data.LIM['2017-1'].students[i].name+' puntaje tech: '+((s1T + s2T + s3T + s4T)/sprints.length));
+                     countLIM2++;
+                     console.log(countLIM2);
+                       }
+                    }else{
+                    continue;
+                }
+             }
+ 
+               //alumnas de LIM 2017-2
+               var studentsLIM3 = data.LIM['2017-2'].students;
+               var countLIM3= 0;
+               for(var i = 0; i < studentsLIM3.length; i++){
+                   //verifica si esta activa la estudiante
+                   if(data.LIM['2017-2'].students[i].active){
+                   var sprints = data.LIM['2017-2'].students[i].sprints;
+                   var s1T= data.LIM['2017-2'].students[i].sprints[0].score.tech;
+                   var s2T= data.LIM['2017-2'].students[i].sprints[1].score.tech;
+                   
+                       if ((s1T + s2T)/sprints.length > 1260){
+                       console.log('nombre estudiante: '+data.LIM['2017-2'].students[i].name+' puntaje tech: '+((s1T + s2T)/sprints.length));
+                       countLIM3++;
+                       console.log(countLIM3);
+                         }
+                      }else{
+                      continue;
+                  }
+               } 
+
+                //alumnas de SCL 2016-2
+           var studentsSCL1 = data.SCL['2016-2'].students;
+           var countSCL1= 0;
+           for(var i = 0; i < studentsSCL1.length; i++){
+               //verifica si esta activa la estudiante
+               if(data.SCL['2016-2'].students[i].active){
+               var sprints = data.SCL['2016-2'].students[i].sprints;
+               var s1T= data.SCL['2016-2'].students[i].sprints[0].score.tech;
+               var s2T= data.SCL['2016-2'].students[i].sprints[1].score.tech;
+               var s3T= data.SCL['2016-2'].students[i].sprints[2].score.tech;
+               var s4T= data.SCL['2016-2'].students[i].sprints[3].score.tech;
+       
+                   if ((s1T + s2T + s3T + s4T)/sprints.length > 1260){
+                   console.log('nombre estudiante: '+data.SCL['2016-2'].students[i].name+' puntaje tech: '+((s1T + s2T + s3T + s4T)/sprints.length));
+                   countSCL1++;
+                   console.log(countSCL1);
+                     }
+                  }else{
+                  continue;
+              }
+           }
+
+            //alumnas de SCL 2017-1
+            var studentsSCL2 = data.SCL['2017-1'].students;
+            var countSCL2= 0;
+            for(var i = 0; i < studentsSCL2.length; i++){
+                //verifica si esta activa la estudiante
+                if(data.SCL['2017-1'].students[i].active){
+                var sprints = data.SCL['2017-1'].students[i].sprints;
+                var s1T= data.SCL['2017-1'].students[i].sprints[0].score.tech;
+                var s2T= data.SCL['2017-1'].students[i].sprints[1].score.tech;
+                var s3T= data.SCL['2017-1'].students[i].sprints[2].score.tech;
+        
+                    if ( (s1T + s2T + s3T)/sprints.length > 1260){
+                    console.log('nombre estudiante: '+data.SCL['2017-1'].students[i].name+' puntaje tech: '+((s1T + s2T + s3T)/sprints.length));
+                    countSCL2++;
+                    console.log(countSCL2);
+                      }
+                   }else{
+                   continue;
+                   
+               }
+            }
+
+            //alumnas de SCL 2017-2
+            var studentsSCL3 = data.SCL['2017-2'].students;
+            var countSCL3= 0;
+            for(var i = 0; i < studentsSCL3.length; i++){
+                //verifica si esta activa la estudiante
+                if(data.SCL['2017-2'].students[i].active){
+                var sprints = data.SCL['2017-2'].students[i].sprints;
+                var s1T= data.SCL['2017-2'].students[i].sprints[0].score.tech;
+                var s2T= data.SCL['2017-2'].students[i].sprints[1].score.tech;
+                
+                    if ((s1T + s2T)/sprints.length > 1260){
+                    console.log('nombre estudiante: '+data.SCL['2017-2'].students[i].name+' puntaje tech: '+((s1T + s2T)/sprints.length));
+                    countSCL3++;
+                    console.log(countSCL3);
+                      }
+                   }else{
+                   continue;
+               }
+            } 
+return countAQP1 + countAQP2 + countCDMX1 + countCDMX2 + countLIM1 + countLIM2 + countLIM3 + countSCL1 + countSCL2 + countSCL3;
+}
+
+
 
 //7.-La cantidad y el porcentaje que representa el total de estudiantes que superan la meta de puntos de HSE en promedio y por sprint
+function superanHSE(){
+
+    //alumnas de AQP 2016-2
+    var studentsAQP1 = data.AQP["2016-2"].students;
+    var countAQP1= 0;
+    for(var i = 0; i < studentsAQP1.length; i++){
+        var sprints = data.AQP["2016-2"].students[i].sprints;
+        var s1T= data.AQP["2016-2"].students[i].sprints[0].score.tech;
+        var s2T= data.AQP["2016-2"].students[i].sprints[1].score.tech;
+        var s3T= data.AQP["2016-2"].students[i].sprints[2].score.tech;
+        var s4T= data.AQP["2016-2"].students[i].sprints[3].score.tech;
+
+            if ((s1T + s2T + s3T + s4T)/sprints.length > 1260){
+            console.log('nombre estudiante: '+data.AQP["2016-2"].students[i].name+' puntaje tech: '+((s1T + s2T + s3T  + s4T)/sprints.length));
+            countAQP1++;
+            console.log(countAQP1);
+              }
+    }
+
+    //alumnas de AQP 2017-1
+    var studentsAQP2 = data.AQP["2017-1"].students;
+    var countAQP2= 0;
+    for(var i = 0; i < studentsAQP2.length; i++){
+        var sprints = data.AQP["2017-1"].students[i].sprints;
+        var s1T= data.AQP["2017-1"].students[i].sprints[0].score.tech;
+        var s2T= data.AQP["2017-1"].students[i].sprints[1].score.tech;
+        var s3T= data.AQP["2017-1"].students[i].sprints[2].score.tech;
+
+            if ((s1T + s2T + s3T)/sprints.length > 1260){
+            console.log('nombre estudiante: '+data.AQP["2017-1"].students[i].name+' puntaje tech: '+((s1T + s2T + s3T)/sprints.length));
+            countAQP2++;
+            console.log(countAQP2);
+              }
+    }
+
+      //alumnas de CDMX 2017-1
+      var studentsCDMX1 = data.CDMX["2017-1"].students;
+      var countCDMX1= 0;
+      for(var i = 0; i < studentsCDMX1.length; i++){
+          var sprints = data.CDMX["2017-1"].students[i].sprints;
+          var s1T= data.CDMX["2017-1"].students[i].sprints[0].score.tech;
+          var s2T= data.CDMX["2017-1"].students[i].sprints[1].score.tech;
+          var s3T= data.CDMX["2017-1"].students[i].sprints[2].score.tech;
+  
+              if ((s1T + s2T + s3T)/sprints.length > 1260){
+              console.log('nombre estudiante: '+data.CDMX["2017-1"].students[i].name+' puntaje tech: '+((s1T + s2T + s3T)/sprints.length));
+              countCDMX1++;
+              console.log(countCDMX1);
+                }
+      }
+
+         //alumnas de CDMX 2017-2
+         var studentsCDMX2 = data.CDMX['2017-2'].students;
+         var countCDMX2= 0;
+         for(var i = 0; i < studentsCDMX2.length; i++){
+             //verifica si esta activa la estudiante
+             if(data.CDMX['2017-2'].students[i].active){
+             var sprints = data.CDMX['2017-2'].students[i].sprints;
+             var s1T= data.CDMX['2017-2'].students[i].sprints[0].score.tech;
+             var s2T= data.CDMX['2017-2'].students[i].sprints[1].score.tech;
+     
+                 if ((s1T + s2T)/sprints.length > 1260){
+                 console.log('nombre estudiante: '+data.CDMX['2017-2'].students[i].name+' puntaje tech: '+((s1T + s2T)/sprints.length));
+                 countCDMX2++;
+                 console.log(countCDMX2);
+                   }
+                }else{
+                continue;
+            }
+         }
+
+           //alumnas de LIM 2016-2
+           var studentsLIM1 = data.LIM['2016-2'].students;
+           var countLIM1= 0;
+           for(var i = 0; i < studentsLIM1.length; i++){
+               //verifica si esta activa la estudiante
+               if(data.LIM['2016-2'].students[i].active){
+               var sprints = data.LIM['2016-2'].students[i].sprints;
+               var s1T= data.LIM['2016-2'].students[i].sprints[0].score.tech;
+               var s2T= data.LIM['2016-2'].students[i].sprints[1].score.tech;
+       
+                   if ((s1T + s2T)/sprints.length > 1260){
+                   console.log('nombre estudiante: '+data.LIM['2016-2'].students[i].name+' puntaje tech: '+((s1T + s2T)/sprints.length));
+                   countLIM1++;
+                   console.log(countLIM1);
+                     }
+                  }else{
+                  continue;
+              }
+           }
+
+             //alumnas de LIM 2017-1
+             var studentsLIM2 = data.LIM['2017-1'].students;
+             var countLIM2= 0;
+             for(var i = 0; i < studentsLIM2.length; i++){
+                 //verifica si esta activa la estudiante
+                 if(data.LIM['2017-1'].students[i].active){
+                 var sprints = data.LIM['2017-1'].students[i].sprints;
+                 var s1H= data.LIM['2017-1'].students[i].sprints[0].score.hse;
+                 var s2H= data.LIM['2017-1'].students[i].sprints[1].score.hse;
+                 var s3H= data.LIM['2017-1'].students[i].sprints[2].score.hse;
+                 var s4H= data.LIM['2017-1'].students[i].sprints[3].score.hse;
+         
+                     if ((s1H + s2H + s3H + s4H)/sprints.length > 840 && (s1T + s2T + s3T + s4T)/sprints.length > 1260){
+                     console.log('nombre estudiante: '+data.LIM['2017-1'].students[i].name+' puntaje hse: '+((s1H + s2H + s3H + s4H)/sprints.length));
+                     countLIM2++;
+                     console.log(countLIM2);
+                       }
+                    }else{
+                    continue;
+                }
+             }
+ 
+               //alumnas de LIM 2017-2
+               var studentsLIM3 = data.LIM['2017-2'].students;
+               var countLIM3= 0;
+               for(var i = 0; i < studentsLIM3.length; i++){
+                   //verifica si esta activa la estudiante
+                   if(data.LIM['2017-2'].students[i].active){
+                   var sprints = data.LIM['2017-2'].students[i].sprints;
+                   var s1H= data.LIM['2017-2'].students[i].sprints[0].score.hse;
+                   var s2H= data.LIM['2017-2'].students[i].sprints[1].score.hse;
+                   
+                       if ((s1H + s2H)/sprints.length > 840){
+                       console.log('nombre estudiante: '+data.LIM['2017-2'].students[i].name+' puntaje hse: '+((s1H + s2H)/sprints.length));
+                       countLIM3++;
+                       console.log(countLIM3);
+                         }
+                      }else{
+                      continue;
+                  }
+               } 
+
+                //alumnas de SCL 2016-2
+           var studentsSCL1 = data.SCL['2016-2'].students;
+           var countSCL1= 0;
+           for(var i = 0; i < studentsSCL1.length; i++){
+               //verifica si esta activa la estudiante
+               if(data.SCL['2016-2'].students[i].active){
+               var sprints = data.SCL['2016-2'].students[i].sprints;
+               var s1H= data.SCL['2016-2'].students[i].sprints[0].score.hse;
+               var s2H= data.SCL['2016-2'].students[i].sprints[1].score.hse;
+               var s3H= data.SCL['2016-2'].students[i].sprints[2].score.hse;
+               var s4H= data.SCL['2016-2'].students[i].sprints[3].score.hse;
+       
+                   if ((s1H + s2H + s3H + s4H)/sprints.length > 840 && (s1T + s2T + s3T + s4T)/sprints.length > 1260){
+                   console.log('nombre estudiante: '+data.SCL['2016-2'].students[i].name+' puntaje hse: '+((s1H + s2H + s3H + s4H)/sprints.length));
+                   countSCL1++;
+                   console.log(countSCL1);
+                     }
+                  }else{
+                  continue;
+              }
+           }
+
+            //alumnas de SCL 2017-1
+            var studentsSCL2 = data.SCL['2017-1'].students;
+            var countSCL2= 0;
+            for(var i = 0; i < studentsSCL2.length; i++){
+                //verifica si esta activa la estudiante
+                if(data.SCL['2017-1'].students[i].active){
+                var sprints = data.SCL['2017-1'].students[i].sprints;
+                var s1H= data.SCL['2017-1'].students[i].sprints[0].score.hse;
+                var s2H= data.SCL['2017-1'].students[i].sprints[1].score.hse;
+                var s3H= data.SCL['2017-1'].students[i].sprints[2].score.hse;
+        
+                    if ((s1H + s2H + s3H)/sprints.length > 840 ){
+                    console.log('nombre estudiante: '+data.SCL['2017-1'].students[i].name+' puntaje hse: '+((s1H + s2H + s3H)/sprints.length));
+                    countSCL2++;
+                    console.log(countSCL2);
+                      }
+                   }else{
+                   continue;
+                   
+               }
+            }
+
+            //alumnas de SCL 2017-2
+            var studentsSCL3 = data.SCL['2017-2'].students;
+            var countSCL3= 0;
+            for(var i = 0; i < studentsSCL3.length; i++){
+                //verifica si esta activa la estudiante
+                if(data.SCL['2017-2'].students[i].active){
+                var sprints = data.SCL['2017-2'].students[i].sprints;
+                var s1H= data.SCL['2017-2'].students[i].sprints[0].score.hse;
+                var s2H= data.SCL['2017-2'].students[i].sprints[1].score.hse;
+                
+                    if ((s1H + s2H)/sprints.length > 840 ){
+                    console.log('nombre estudiante: '+data.SCL['2017-2'].students[i].name+' puntaje hse: '+((s1H + s2H)/sprints.length));
+                    countSCL3++;
+                    console.log(countSCL3);
+                      }
+                   }else{
+                   continue;
+               }
+            } 
+return countAQP1 + countAQP2 + countCDMX1 + countCDMX2 + countLIM1 + countLIM2 + countLIM3 + countSCL1 + countSCL2 + countSCL3;
+}
+}
 
 //8.-porcentaje de estudiantes satisfechas con la experiencia de Laboratoria.
 function promedioAlumnas(){
